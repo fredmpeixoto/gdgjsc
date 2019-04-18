@@ -1,4 +1,19 @@
 h1{
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
+
+mat-toolbar:hover{
+  height: 100%;
+  transition-delay: 1s;
+  transition-duration: 1s;
+}
+
+mat-toolbar{
+  transition-delay: 1s;
+  transition-duration: 1s;
+}
+
+
+
+>>>>>>> cb042937c2beccc613728e29e5d8568a7a3f78d3
