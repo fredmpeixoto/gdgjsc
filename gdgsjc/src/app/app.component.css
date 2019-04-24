@@ -3,27 +3,59 @@ h1{
   text-align: center;
 }
 
-mat-toolbar{
-  transition-duration: 2s;
+@media only screen and (max-width: 600px){
+  h1{
+    font-size: 70%;
+  }
+
 }
 
+mat-toolbar{
+  width: 100%;
+  transition-duration: 2s;
+}
 
 .showScreen {
   height: 100%;
   transition-duration: 2s;
 }
 
-
-
 #logo{
   text-align: left;
-  width:  7%;
+  width: 7%;
   border-radius: 50px;
   box-shadow: 0px 0px 2px;
 }
 
-
 .col {
-display: grid;
-grid-template-columns: 40% auto ;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33% ;
+  align-items: center;
 }
+
+.col-5 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  align-items: center;
+  height: 70%;
+}
+
+.iconSocial{
+  height: 50px;
+  margin: 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-duration: 1s;
+ }
+
+ img.iconSocial:hover {
+  height: 10%;
+  transition-duration: 1s;
+ }
+
+ img.iconSocial:active{
+  height: 10%;
+  transition-duration: 1s;
+ }

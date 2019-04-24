@@ -11,13 +11,17 @@ export class AppComponent implements OnInit {
   telaInteira: boolean;
 
   ngOnInit(): void {
-    this.mostrarTelaInteira();
+    this.MostrarTelaInteira();
   }
 
-  mostrarTelaInteira(){
+  MostrarTelaInteira(){
     setTimeout(() => {
     this.telaInteira = true;
     }, 1000);
+  }
+
+  RedirectUrl(url:string):void{
+    window.location.href = url;
   }
 
 }
