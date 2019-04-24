@@ -1,7 +1,7 @@
 <mat-toolbar [ngClass]="{'showScreen': !telaInteira }">
   <div class="col">
     <div>
-      <img src="../assets/gdgjsc.jpeg" alt="GDG SJC" id="logo">
+      <img src="assets/gdgjsc.jpeg" alt="GDG SJC" id="logo">
     </div>
     <div>
       <h1> GDG São José dos Campos </h1>
@@ -9,10 +9,10 @@
   </div>
 </mat-toolbar>
 
-<div class="col-5">
-  <img (click)="RedirectUrl('https://www.facebook.com/gdgsjc')" src="../assets/facebook.png" alt="facebook" class="iconSocial">
-  <img (click)="RedirectUrl('https://www.instagram.com/gdg_sjc')" src="../assets/sm-icons-instagram-app-icon.png" alt="Instagram" class="iconSocial">
-  <img (click)="RedirectUrl('https://br.linkedin.com/company/gdg-sao-jose-dos-campos')" src="../assets/sm-icons-linkedIn-In-tm.png" alt="linkedin" class="iconSocial">
-  <img (click)="RedirectUrl('https://www.meetup.com/gdgsjc/')" src="../assets/logo--mSwarm.svg" alt="meetup" class="iconSocial">
-  <img (click)="RedirectUrl('mailto:gdgsaojosedoscampos@gmail.com')" src="../assets/gmail.png" alt="Email" class="iconSocial">
+<div class="col-5" *ngIf="telaInteira">
+  <img (click)="RedirectUrl('https://www.facebook.com/gdgsjc')" src="assets/facebook.png" alt="facebook" class="iconSocial">
+  <img (click)="RedirectUrl('https://www.instagram.com/gdg_sjc')" src="assets/sm-icons-instagram-app-icon.png" alt="Instagram" class="iconSocial">
+  <img (click)="RedirectUrl('https://br.linkedin.com/company/gdg-sao-jose-dos-campos')" src="assets/sm-icons-linkedIn-In-tm.png" alt="linkedin" class="iconSocial">
+  <img (click)="RedirectUrl('https://www.meetup.com/gdgsjc/')" src="assets/logo--mSwarm.svg" alt="meetup" class="iconSocial">
+  <img (click)="RedirectUrl('mailto:gdgsaojosedoscampos@gmail.com')" src="assets/gmail.png" alt="Email" class="iconSocial">
 </div>

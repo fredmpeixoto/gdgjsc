@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     }, 1000);
   }
 
-  RedirectUrl(url:string):void{
+  RedirectUrl(url:string): void{
     window.location.href = url;
   }
 
