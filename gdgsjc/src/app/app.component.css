@@ -50,12 +50,7 @@ mat-toolbar{
   transition-duration: 1s;
  }
 
- img.iconSocial:hover {
-  height: 10%;
-  transition-duration: 1s;
- }
-
- img.iconSocial:active{
-  height: 10%;
+ .iconSocial:hover, .iconSocial:focus {
+  height: 70px;
   transition-duration: 1s;
  }
