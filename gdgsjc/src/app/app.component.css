@@ -1,16 +1,16 @@
-h1{
+h1 {
   width: 100%;
   text-align: center;
 }
 
-@media only screen and (max-width: 600px){
-  h1{
+@media only screen and (max-width: 600px) {
+  h1 {
     font-size: 70%;
   }
 
 }
 
-mat-toolbar{
+mat-toolbar {
   width: 100%;
   transition-duration: 2s;
 }
@@ -20,7 +20,7 @@ mat-toolbar{
   transition-duration: 2s;
 }
 
-#logo{
+#logo {
   text-align: left;
   width: 7%;
   border-radius: 50px;
@@ -30,7 +30,7 @@ mat-toolbar{
 .col {
   width: 100%;
   display: grid;
-  grid-template-columns: 33% 33% 33% ;
+  grid-template-columns: 33% 33% 33%;
   align-items: center;
 }
 
@@ -42,15 +42,21 @@ mat-toolbar{
   height: 70%;
 }
 
-.iconSocial{
+.iconSocial {
   height: 50px;
   margin: 5px 5px;
   margin-left: auto;
   margin-right: auto;
   transition-duration: 1s;
- }
+}
 
- .iconSocial:hover, .iconSocial:focus {
+.iconSocial:hover,
+.iconSocial:focus {
   height: 70px;
   transition-duration: 1s;
- }
+}
+
+.iconSocialMove{
+  height: 70px;
+  transition-duration: 1s;
+}
