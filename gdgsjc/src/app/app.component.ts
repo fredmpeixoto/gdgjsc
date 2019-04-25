@@ -21,7 +21,11 @@ export class AppComponent implements OnInit {
   }
 
   RedirectUrl(url:string): void{
-    window.location.href = url;
+    window.open(url);
+  }
+
+  SendEmail(email:string): void{
+    window.location.href = email;
   }
 
 }
