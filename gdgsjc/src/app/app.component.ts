@@ -9,16 +9,14 @@ import { $ } from 'protractor';
 export class AppComponent implements OnInit {
 
   telaInteira: boolean;
-  logos: string[];
   moveFacebook: boolean;
   moveInstagram: boolean;
   moveLinkedin: boolean;
   moveMeetup: boolean;
   moveEmail: boolean;
+  moveWhatsapp: boolean;
 
   constructor() {
-    this.logos = ['facebook', 'meetup', 'instagram', 'linkedin', 'email'];
-
   }
 
   ngOnInit(): void {
@@ -61,12 +59,21 @@ export class AppComponent implements OnInit {
       this.moveInstagram = this.moveInstagram;
       this.moveLinkedin = this.moveLinkedin;
       this.moveMeetup = !this.moveMeetup;
-      this.moveEmail = !this.moveEmail;
+      this.moveWhatsapp = !this.moveWhatsapp;
     }, 6000);
 
     setTimeout(() => {
+      this.moveFacebook = this.moveFacebook;
+      this.moveInstagram = this.moveInstagram;
+      this.moveLinkedin = this.moveLinkedin;
+      this.moveMeetup = this.moveMeetup;
+      this.moveWhatsapp = !this.moveWhatsapp;
       this.moveEmail = !this.moveEmail;
     }, 7000);
+
+    setTimeout(() => {
+      this.moveEmail = !this.moveEmail;
+    }, 8000);
 
 
   }

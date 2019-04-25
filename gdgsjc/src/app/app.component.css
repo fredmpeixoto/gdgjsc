@@ -3,13 +3,6 @@ h1 {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 70%;
-  }
-
-}
-
 mat-toolbar {
   width: 100%;
   transition-duration: 2s;
@@ -37,7 +30,7 @@ mat-toolbar {
 .col-5 {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   align-items: center;
   height: 70%;
 }
@@ -59,4 +52,18 @@ mat-toolbar {
 .iconSocialMove{
   height: 70px;
   transition-duration: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 70%;
+  }
+  .col-5 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    height: 70%;
+  }
+
 }
