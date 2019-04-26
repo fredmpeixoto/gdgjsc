@@ -1,0 +1,24 @@
+<div class="col-3">
+<div></div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Sorteador</mat-card-title>
+      <mat-card-subtitle>Coloque o número de colunas e fileiras</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <input matInput placeholder="Fileiras" type="number"  [(ngModel)]="fileira" name="fileira" >
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Cadeiras na fileira" type="number" [(ngModel)]="cadeira" name="cadeira">
+        </mat-form-field>
+        <button mat-raised-button color="warn" type="button" (click)="gerarMapaSortear()">Sortear!</button>
+      </form>
+      <h2 *ngIf="sorteiro">
+        Fileira {{ rdmFileira }}, Cadeira {{ rdmCadeira }}
+      </h2>
+    </mat-card-content>
+  </mat-card>
+
+</div>

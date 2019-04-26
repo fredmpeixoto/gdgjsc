@@ -35,7 +35,7 @@ mat-toolbar {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   align-items: center;
-  height: 70%;
+  height: 50%;
   transition-duration: 1s;
 }
 
