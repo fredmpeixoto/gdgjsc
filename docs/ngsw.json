@@ -9,7 +9,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.38e6c578ea8908a0653f.js",
+        "/main.6a2f1afacf8551998444.js",
         "/polyfills.7037a817a5bb670ed2ca.js",
         "/runtime.ec2944dd8b20ec099bf3.js",
         "/styles.3182af351c80ddd3a977.css"
@@ -60,8 +60,8 @@
     "/assets/twitter.png": "cf7f903ecc1181a42a05761ee8e7ca8b60cc66e4",
     "/assets/whatsapp.png": "3075fef72c1ca0111364cc9d28a576a4c9f3e6cf",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "84fc3fcdbd9086f076c335e2d23b0839b50d5911",
-    "/main.38e6c578ea8908a0653f.js": "2aa5537d09b67dd7d4dfe918b1b73456367b1461",
+    "/index.html": "768182bbbeefcca191edc2c0abbcda735223ae69",
+    "/main.6a2f1afacf8551998444.js": "585c9f1e9904450671e93a613f7a735fd908b7b9",
     "/polyfills.7037a817a5bb670ed2ca.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/styles.3182af351c80ddd3a977.css": "cf178f57a2117e87e9f03802553eca9ffeb0a42b"
