@@ -49,13 +49,16 @@ mat-toolbar {
 
 .iconSocial:hover,
 .iconSocial:focus {
-  height: 60px;
+  height: 70px;
   transition-duration: 1s;
+  border-radius: 100%;
+  box-shadow: 6px 3px 20px 0.1px grey;
 }
 
 .iconSocialMove{
-  height: 60px;
+  height: 70px;
   transition-duration: 1s;
+  border-radius: 100%;
   box-shadow: 6px 3px 20px 0.1px grey;
 
 }
@@ -72,5 +75,4 @@ mat-toolbar {
     align-items: center;
     height: 30%;
   }
-
 }
