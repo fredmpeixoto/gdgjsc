@@ -8,7 +8,7 @@ import { $ } from 'protractor';
 })
 export class AppComponent implements OnInit {
 
-  telaInteira: boolean;
+  fullScreen: boolean;
   moveFacebook: boolean;
   moveInstagram: boolean;
   moveLinkedin: boolean;
@@ -26,33 +26,35 @@ export class AppComponent implements OnInit {
 
   MostrarTelaInteira() {
     setTimeout(() => {
-      this.telaInteira = true;
-    }, 1000);
+      this.fullScreen = true;
+    }, 1500);
   }
+
+
 
   MoveIcon(): void {
     setTimeout(() => {
       this.moveFacebook = !this.moveFacebook;
-    }, 2000);
+    }, 3000);
 
     setTimeout(() => {
       this.moveFacebook = !this.moveFacebook;
       this.moveInstagram = !this.moveInstagram;
-    }, 3000);
+    }, 4000);
 
 
     setTimeout(() => {
       this.moveFacebook = this.moveFacebook;
       this.moveInstagram = !this.moveInstagram;
       this.moveLinkedin = !this.moveLinkedin;
-    }, 4000);
+    }, 5000);
 
     setTimeout(() => {
       this.moveFacebook = this.moveFacebook;
       this.moveInstagram = this.moveInstagram;
       this.moveLinkedin = !this.moveLinkedin;
       this.moveMeetup = !this.moveMeetup;
-    }, 5000);
+    }, 6000);
 
     setTimeout(() => {
       this.moveFacebook = this.moveFacebook;
@@ -60,7 +62,7 @@ export class AppComponent implements OnInit {
       this.moveLinkedin = this.moveLinkedin;
       this.moveMeetup = !this.moveMeetup;
       this.moveWhatsapp = !this.moveWhatsapp;
-    }, 6000);
+    }, 7000);
 
     setTimeout(() => {
       this.moveFacebook = this.moveFacebook;
@@ -69,11 +71,11 @@ export class AppComponent implements OnInit {
       this.moveMeetup = this.moveMeetup;
       this.moveWhatsapp = !this.moveWhatsapp;
       this.moveEmail = !this.moveEmail;
-    }, 7000);
+    }, 8000);
 
     setTimeout(() => {
       this.moveEmail = !this.moveEmail;
-    }, 8000);
+    }, 9000);
 
 
 

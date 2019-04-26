@@ -1,4 +1,4 @@
-<mat-toolbar [ngClass]="{'showScreen': !telaInteira }">
+<mat-toolbar [ngClass]="{'showScreen': !fullScreen }">
   <div class="col">
     <div>
       <img src="./assets/gdgjsc.jpeg" alt="GDG SJC" id="logo">
@@ -9,7 +9,8 @@
   </div>
 </mat-toolbar>
 
-<div class="col-5" *ngIf="telaInteira">
+
+<div class="col-5" *ngIf="fullScreen">
   <img (click)="RedirectUrl('https://www.facebook.com/gdgsjc')" src="./assets/facebook.png" alt="Facebook"
     [ngClass]="{'iconSocial': true, iconSocialMove: moveFacebook }">
 
@@ -19,10 +20,10 @@
   <img (click)="RedirectUrl('https://br.linkedin.com/company/gdg-sao-jose-dos-campos')"
     src="./assets/sm-icons-linkedIn-In-tm.png" alt="linkedin" [ngClass]="{'iconSocial': true, iconSocialMove: moveLinkedin }">
 
-  <img (click)="RedirectUrl('https://www.meetup.com/gdgsjc/')" src="./assets/logo--mSwarm.svg" alt="Meetup"
+  <img (click)="RedirectUrl('https://www.meetup.com/gdgsjc/')" src="./assets/meetupQD.png" alt="Meetup"
   [ngClass]="{'iconSocial': true, iconSocialMove: moveMeetup }">
 
-  <img (click)="RedirectUrl('https://chat.whatsapp.com/6xMDL2E0HpH6WiaFTZWZor')" src="./assets/whatsapp.png" alt="Whatsapp"
+  <img (click)="RedirectUrl('https://chat.whatsapp.com/6xMDL2E0HpH6WiaFTZWZor')" src="./assets/whatsappQD.png" alt="Whatsapp"
   [ngClass]="{'iconSocial': true, iconSocialMove: moveWhatsapp }">
 
   <img (click)="SendEmail('mailto:gdgsaojosedoscampos@gmail.com')" src="./assets/gmail.png" alt="Email"
