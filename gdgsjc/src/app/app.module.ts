@@ -14,8 +14,8 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    MatToolbarModule
+   // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
