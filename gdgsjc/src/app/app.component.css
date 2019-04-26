@@ -43,6 +43,8 @@ mat-toolbar {
   transition-duration: 1s;
 }
 
+
+
 .iconSocial:hover,
 .iconSocial:focus {
   height: 70px;
@@ -59,11 +61,12 @@ mat-toolbar {
     font-size: 70%;
   }
   .col-5 {
+    margin-top: 100px;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
-    height: 70%;
+    height: 30%;
   }
 
 }
