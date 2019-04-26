@@ -49,13 +49,15 @@ mat-toolbar {
 
 .iconSocial:hover,
 .iconSocial:focus {
-  height: 70px;
+  height: 60px;
   transition-duration: 1s;
 }
 
 .iconSocialMove{
-  height: 70px;
+  height: 60px;
   transition-duration: 1s;
+  box-shadow: 6px 3px 20px 0.1px grey;
+
 }
 
 @media only screen and (max-width: 600px) {

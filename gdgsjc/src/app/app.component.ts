@@ -76,6 +76,7 @@ export class AppComponent implements OnInit {
     }, 8000);
 
 
+
   }
 
   RedirectUrl(url: string): void {
