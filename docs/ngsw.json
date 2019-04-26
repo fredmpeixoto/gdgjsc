@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.38e6c578ea8908a0653f.js",
+        "/polyfills.7037a817a5bb670ed2ca.js",
+        "/runtime.ec2944dd8b20ec099bf3.js",
+        "/styles.3182af351c80ddd3a977.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/facebook.png",
+        "/assets/gdgjsc.jpeg",
+        "/assets/gmail.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/logo--mSwarm.svg",
+        "/assets/sm-icons-instagram-app-icon.png",
+        "/assets/sm-icons-linkedIn-In-tm.png",
+        "/assets/twitter.png",
+        "/assets/whatsapp.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/facebook.png": "9ee243e531c995c25645beffe9f34a0a31ee2c32",
+    "/assets/gdgjsc.jpeg": "67e133f8972d05ca8a16620e0001b01dda6f18b4",
+    "/assets/gmail.png": "0cf1e1e4fb3bc1dee3fbfa2d6370b9712f150d39",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/logo--mSwarm.svg": "efb7127703c2b08bd3d8736f31f1cff2327688d4",
+    "/assets/sm-icons-instagram-app-icon.png": "a2784d90a216551c0b70d9b992d2c3bb4d8c7b96",
+    "/assets/sm-icons-linkedIn-In-tm.png": "2ecb6796b196c712e0376ca69aaca577d1496d82",
+    "/assets/twitter.png": "cf7f903ecc1181a42a05761ee8e7ca8b60cc66e4",
+    "/assets/whatsapp.png": "3075fef72c1ca0111364cc9d28a576a4c9f3e6cf",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "84fc3fcdbd9086f076c335e2d23b0839b50d5911",
+    "/main.38e6c578ea8908a0653f.js": "2aa5537d09b67dd7d4dfe918b1b73456367b1461",
+    "/polyfills.7037a817a5bb670ed2ca.js": "6946e10a03311677a01490b8e91741668e64e17e",
+    "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.3182af351c80ddd3a977.css": "cf178f57a2117e87e9f03802553eca9ffeb0a42b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
