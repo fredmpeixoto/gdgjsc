@@ -1,16 +1,16 @@
 <mat-toolbar [ngClass]="{'showScreen': !fullScreen }">
   <div class="col">
     <div>
-      <img src="./assets/gdgjsc.jpeg" alt="GDG SJC" id="logo">
+      <img src="./assets/gdgjsc.jpeg" alt="GDG SJC" id="logo" (click)="mostrarSortear =!mostrarSortear">
     </div>
     <div>
       <h1> GDG São José dos Campos </h1>
     </div>
   </div>
 </mat-toolbar>
+<div *ngIf="fullScreen" [style.height.%]="100">
 
-
-  <div class="col-5" *ngIf="fullScreen">
+  <div class="col-5">
     <img (click)="RedirectUrl('https://www.facebook.com/gdgsjc')" src="./assets/facebook.png" alt="Facebook"
       [ngClass]="{'iconSocial': true, iconSocialMove: moveFacebook }">
 
@@ -27,9 +27,20 @@
     <img (click)="RedirectUrl('https://chat.whatsapp.com/6xMDL2E0HpH6WiaFTZWZor')" src="./assets/whatsappQD.png"
       alt="Whatsapp" [ngClass]="{'iconSocial': true, iconSocialMove: moveWhatsapp }">
 
+    <img (click)="RedirectUrl('https://twitter.com/GDG_SJC')" src="./assets/twitter.png"
+      alt="Twitter" [ngClass]="{'iconSocial': true, iconSocialMove: moveTwitter }">
+
+    <img (click)="RedirectUrl('https://t.me/joinchat/EFuNJxMTxlOFgQf_pa7OAg')" src="./assets/telegram.svg"
+      alt="Telegram" [ngClass]="{'iconSocial': true, iconSocialMove: moveTelegram }">
+
+    <img (click)="RedirectUrl('https://www.youtube.com/channel/UCJCBUBI4TTn6mALqW7GZ2UQ')" src="./assets/youtube.png"
+      alt="Telegram" [ngClass]="{'iconSocial': true, iconSocialMove: moveTelegram }">
+
     <img (click)="SendEmail('mailto:gdgsaojosedoscampos@gmail.com')" src="./assets/gmail.png" alt="Email"
       [ngClass]="{'iconSocial': true, iconSocialMove: moveEmail }">
 
   </div>
-  <app-raffle *ngIf="fullScreen"></app-raffle>
 
+
+  <app-raffle *ngIf="mostrarSortear"></app-raffle>
+</div>

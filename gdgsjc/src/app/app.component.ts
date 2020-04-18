@@ -14,7 +14,10 @@ export class AppComponent implements OnInit {
   moveLinkedin: boolean;
   moveMeetup: boolean;
   moveEmail: boolean;
+  mostrarSortear: boolean;
   moveWhatsapp: boolean;
+  moveTwitter: boolean;
+  moveTelegram: boolean;
 
   constructor() {
   }
