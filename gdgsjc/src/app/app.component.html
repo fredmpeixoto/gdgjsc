@@ -1,46 +1,19 @@
 <mat-toolbar [ngClass]="{'showScreen': !fullScreen }">
   <div class="col">
     <div>
-      <img src="./assets/gdgjsc.jpeg" alt="GDG SJC" id="logo" (click)="mostrarSortear =!mostrarSortear">
+      <img src="assets/gdgjsc.jpeg" alt="GDG SJC" id="logo" (click)="mostrarSortear =!mostrarSortear">
     </div>
     <div>
       <h1> GDG São José dos Campos </h1>
     </div>
   </div>
 </mat-toolbar>
-<div *ngIf="fullScreen" [style.height.%]="100">
+<div *ngIf="fullScreen" [style.height.%]="70">
 
   <div class="col-5">
-    <img (click)="RedirectUrl('https://www.facebook.com/gdgsjc')" src="./assets/facebook.png" alt="Facebook"
-      [ngClass]="{'iconSocial': true, iconSocialMove: moveFacebook }">
-
-    <img (click)="RedirectUrl('https://www.instagram.com/gdg_sjc')" src="./assets/sm-icons-instagram-app-icon.png"
-      alt="Instagram" [ngClass]="{'iconSocial': true, iconSocialMove: moveInstagram }">
-
-    <img (click)="RedirectUrl('https://br.linkedin.com/company/gdg-sao-jose-dos-campos')"
-      src="./assets/sm-icons-linkedIn-In-tm.png" alt="linkedin"
-      [ngClass]="{'iconSocial': true, iconSocialMove: moveLinkedin }">
-
-    <img (click)="RedirectUrl('https://www.meetup.com/gdgsjc/')" src="./assets/meetupQD.png" alt="Meetup"
-      [ngClass]="{'iconSocial': true, iconSocialMove: moveMeetup }">
-
-    <img (click)="RedirectUrl('https://chat.whatsapp.com/6xMDL2E0HpH6WiaFTZWZor')" src="./assets/whatsappQD.png"
-      alt="Whatsapp" [ngClass]="{'iconSocial': true, iconSocialMove: moveWhatsapp }">
-
-    <img (click)="RedirectUrl('https://twitter.com/GDG_SJC')" src="./assets/twitter.png"
-      alt="Twitter" [ngClass]="{'iconSocial': true, iconSocialMove: moveTwitter }">
-
-    <img (click)="RedirectUrl('https://t.me/joinchat/EFuNJxMTxlOFgQf_pa7OAg')" src="./assets/telegram.svg"
-      alt="Telegram" [ngClass]="{'iconSocial': true, iconSocialMove: moveTelegram }">
-
-    <img (click)="RedirectUrl('https://www.youtube.com/channel/UCJCBUBI4TTn6mALqW7GZ2UQ')" src="./assets/youtube.png"
-      alt="Telegram" [ngClass]="{'iconSocial': true, iconSocialMove: moveTelegram }">
-
-    <img (click)="SendEmail('mailto:gdgsaojosedoscampos@gmail.com')" src="./assets/gmail.png" alt="Email"
-      [ngClass]="{'iconSocial': true, iconSocialMove: moveEmail }">
-
+    <img class="iconSocial" [class.iconSocialMove]="rede.move" (click)="RedirectUrl(rede)"
+     *ngFor="let rede of redesSociais" [src]="'assets/'+rede.srcImagem" alt="rede.label">
   </div>
-
 
   <app-raffle *ngIf="mostrarSortear"></app-raffle>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { $ } from 'protractor';
+import { RedeSocial } from './raffle/shared/rede-social';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +9,59 @@ import { $ } from 'protractor';
 })
 export class AppComponent implements OnInit {
 
-  fullScreen: boolean;
-  moveFacebook: boolean;
-  moveInstagram: boolean;
-  moveLinkedin: boolean;
-  moveMeetup: boolean;
-  moveEmail: boolean;
-  mostrarSortear: boolean;
-  moveWhatsapp: boolean;
-  moveTwitter: boolean;
-  moveTelegram: boolean;
+  public fullScreen: boolean;
+  public mostrarSortear: boolean;
+  public redesSociais: RedeSocial[];
 
   constructor() {
+
+    this.redesSociais = [
+      {
+        link: "https://www.facebook.com/gdgsjc",
+        srcImagem: "facebook.png",
+        label: "Facebook"
+      },
+      {
+        link: "https://www.instagram.com/gdg_sjc",
+        srcImagem: "instagram.png",
+        label: "instagram"
+      },
+      {
+        link: "https://br.linkedin.com/company/gdg-sao-jose-dos-campos",
+        srcImagem: "linkedin.png",
+        label: "linkedin"
+      },
+      {
+        link: "https://www.meetup.com/gdgsjc/",
+        srcImagem: "meetup.png",
+        label: "meetup"
+      },
+      {
+        link: "https://chat.whatsapp.com/6xMDL2E0HpH6WiaFTZWZor",
+        srcImagem: "whatsapp.png",
+        label: "whatsapp"
+      },
+      {
+        link: "https://twitter.com/GDG_SJC",
+        srcImagem: "twitter.png",
+        label: "twitter"
+      },
+      {
+        link: "https://t.me/joinchat/EFuNJxMTxlOFgQf_pa7OAg",
+        srcImagem: "telegram.svg",
+        label: "telegram"
+      },
+      {
+        link: "https://www.youtube.com/gdgsjc",
+        srcImagem: "youtube.png",
+        label: "youtube"
+      },
+      {
+        email: "mailto:gdgsaojosedoscampos@gmail.com",
+        srcImagem: "gmail.png",
+        label: "gmail"
+      }
+    ];
   }
 
   ngOnInit(): void {
@@ -33,63 +75,23 @@ export class AppComponent implements OnInit {
     }, 1500);
   }
 
-
-
   MoveIcon(): void {
-    setTimeout(() => {
-      this.moveFacebook = !this.moveFacebook;
-    }, 3000);
-
-    setTimeout(() => {
-      this.moveFacebook = !this.moveFacebook;
-      this.moveInstagram = !this.moveInstagram;
-    }, 4000);
-
-
-    setTimeout(() => {
-      this.moveFacebook = this.moveFacebook;
-      this.moveInstagram = !this.moveInstagram;
-      this.moveLinkedin = !this.moveLinkedin;
-    }, 5000);
-
-    setTimeout(() => {
-      this.moveFacebook = this.moveFacebook;
-      this.moveInstagram = this.moveInstagram;
-      this.moveLinkedin = !this.moveLinkedin;
-      this.moveMeetup = !this.moveMeetup;
-    }, 6000);
-
-    setTimeout(() => {
-      this.moveFacebook = this.moveFacebook;
-      this.moveInstagram = this.moveInstagram;
-      this.moveLinkedin = this.moveLinkedin;
-      this.moveMeetup = !this.moveMeetup;
-      this.moveWhatsapp = !this.moveWhatsapp;
-    }, 7000);
-
-    setTimeout(() => {
-      this.moveFacebook = this.moveFacebook;
-      this.moveInstagram = this.moveInstagram;
-      this.moveLinkedin = this.moveLinkedin;
-      this.moveMeetup = this.moveMeetup;
-      this.moveWhatsapp = !this.moveWhatsapp;
-      this.moveEmail = !this.moveEmail;
-    }, 8000);
-
-    setTimeout(() => {
-      this.moveEmail = !this.moveEmail;
-    }, 9000);
-
-
-
+    var moveIcon = setInterval(() => {
+      let rede = this.redesSociais.find(redes => !redes.move);
+      if (!rede) {
+        this.redesSociais.map(redes => redes.move = false);
+        clearInterval(moveIcon);
+        return;
+      }
+      rede.move = true;
+    }, 1000);
   }
 
-  RedirectUrl(url: string): void {
-    window.open(url);
-  }
-
-  SendEmail(email: string): void {
-    window.location.href = email;
+  RedirectUrl(rede?: RedeSocial): void {
+    if (rede.link)
+      window.open(rede.link);
+    else
+      window.location.href = rede.email;
   }
 
 }

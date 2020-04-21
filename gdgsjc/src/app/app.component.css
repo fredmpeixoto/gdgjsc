@@ -18,9 +18,8 @@ mat-toolbar {
 #logo {
   text-align: left;
   width: 40px;
-   border-radius: 100%;
-   margin-top: -5px;
- /* box-shadow: 2px 2px 3px 0px rgb(43, 43, 43); */
+  border-radius: 100%;
+  margin-top: -5px;
   position: absolute;
 }
 
@@ -31,20 +30,21 @@ mat-toolbar {
 }
 
 .col-5 {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  align-items: center;
   height: 50%;
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   transition-duration: 1s;
+  justify-content: space-between;
+  justify-items: center;
+
 }
 
 
 .iconSocial {
   height: 50px;
-  margin: 5px 5px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5px 50px;
   transition-duration: 1s;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px #cac0c052;
@@ -64,14 +64,20 @@ mat-toolbar {
   h1 {
     font-size: 70%;
   }
+
   .col-5 {
-    margin-top: 100px;
-    width: 100%;
+    margin: 100px 0 !important;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 30%;
     transition-duration: 1s;
+
+
+  }
+
+  .iconSocial{
+      margin: 20px 0 !important;
   }
 
 }
