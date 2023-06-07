@@ -12,7 +12,7 @@ export interface RedeSocial {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 
@@ -95,10 +95,10 @@ export class AppComponent implements OnInit {
   }
 
   RedirectUrl(rede?: RedeSocial): void {
-    if (rede.link)
+    if (rede?.link)
       window.open(rede.link);
     else
-      window.location.href = rede.email;
+      window.location.href = rede!.email!;
   }
 
 }
