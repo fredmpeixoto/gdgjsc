@@ -1,19 +1,22 @@
-<mat-toolbar [ngClass]="{'showScreen': !fullScreen }">
+<mat-toolbar [class.showScreen]="fullScreen">
   <div class="col">
     <div>
-      <img src="assets/gdgjsc.jpeg" alt="GDG SJC" id="logo" (click)="mostrarSortear =!mostrarSortear">
+      <img src="assets/gdgjsc.jpeg" alt="GDG SJC" id="logo" />
     </div>
     <div>
-      <h1> GDG São José dos Campos </h1>
+      <h1>GDG São José dos Campos</h1>
     </div>
   </div>
 </mat-toolbar>
 <div *ngIf="fullScreen" [style.height.%]="70">
-
   <div class="col-5">
-    <img class="iconSocial" [class.iconSocialMove]="rede.move" (click)="RedirectUrl(rede)"
-     *ngFor="let rede of redesSociais" [src]="'assets/'+rede.srcImagem" alt="rede.label">
+    <img
+      class="iconSocial"
+      [class.iconSocialMove]="rede.move"
+      (click)="RedirectUrl(rede)"
+      *ngFor="let rede of redesSociais"
+      [src]="'assets/' + rede.srcImagem"
+      alt="rede.label"
+    />
   </div>
-
-  <app-raffle *ngIf="mostrarSortear"></app-raffle>
 </div>

@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
-import { RedeSocial } from './raffle/shared/rede-social';
+
+export interface RedeSocial {
+  link?: string;
+  label?: string;
+  email?: string;
+  move?: boolean;
+  srcImagem?: string;
+}
+
 
 @Component({
   selector: 'app-root',
@@ -9,8 +16,8 @@ import { RedeSocial } from './raffle/shared/rede-social';
 })
 export class AppComponent implements OnInit {
 
-  public fullScreen: boolean;
-  public mostrarSortear: boolean;
+  public fullScreen!: boolean;
+  public mostrarSortear!: boolean;
   public redesSociais: RedeSocial[];
 
   constructor() {
