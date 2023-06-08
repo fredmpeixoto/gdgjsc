@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { socialMedia } from './socialMedia';
 
-export interface RedeSocial {
+export interface socialMedia {
   link?: string;
   label?: string;
   email?: string;
   move?: boolean;
-  srcImagem?: string;
+  srcImg?: string;
 }
 
 
@@ -17,66 +18,19 @@ export interface RedeSocial {
 export class AppComponent implements OnInit {
 
   public fullScreen!: boolean;
-  public mostrarSortear!: boolean;
-  public redesSociais: RedeSocial[];
+  public socialMedia: socialMedia[];
 
   constructor() {
 
-    this.redesSociais = [
-      {
-        link: "https://www.facebook.com/gdgsjc",
-        srcImagem: "facebook.png",
-        label: "Facebook"
-      },
-      {
-        link: "https://www.instagram.com/gdg_sjc",
-        srcImagem: "instagram.png",
-        label: "instagram"
-      },
-      {
-        link: "https://br.linkedin.com/company/gdg-sao-jose-dos-campos",
-        srcImagem: "linkedin.png",
-        label: "linkedin"
-      },
-      {
-        link: "https://www.meetup.com/gdgsjc/",
-        srcImagem: "meetup.png",
-        label: "meetup"
-      },
-      {
-        link: "https://chat.whatsapp.com/6xMDL2E0HpH6WiaFTZWZor",
-        srcImagem: "whatsapp.png",
-        label: "whatsapp"
-      },
-      {
-        link: "https://twitter.com/GDG_SJC",
-        srcImagem: "twitter.png",
-        label: "twitter"
-      },
-      {
-        link: "https://t.me/joinchat/EFuNJxMTxlOFgQf_pa7OAg",
-        srcImagem: "telegram.svg",
-        label: "telegram"
-      },
-      {
-        link: "https://www.youtube.com/gdgsjc",
-        srcImagem: "youtube.png",
-        label: "youtube"
-      },
-      {
-        email: "mailto:gdgsaojosedoscampos@gmail.com",
-        srcImagem: "gmail.png",
-        label: "gmail"
-      }
-    ];
+    this.socialMedia = socialMedia;
   }
 
   ngOnInit(): void {
-    this.MostrarTelaInteira();
+    this.fullScreenMode();
     this.MoveIcon();
   }
 
-  MostrarTelaInteira() {
+  fullScreenMode() {
     setTimeout(() => {
       this.fullScreen = true;
     }, 1500);
@@ -84,21 +38,21 @@ export class AppComponent implements OnInit {
 
   MoveIcon(): void {
     var moveIcon = setInterval(() => {
-      let rede = this.redesSociais.find(redes => !redes.move);
-      if (!rede) {
-        this.redesSociais.map(redes => redes.move = false);
+      let move = this.socialMedia.find(redes => !redes.move);
+      if (!move) {
+        this.socialMedia.map(redes => redes.move = false);
         clearInterval(moveIcon);
         return;
       }
-      rede.move = true;
+      move.move = true;
     }, 1000);
   }
 
-  RedirectUrl(rede?: RedeSocial): void {
-    if (rede?.link)
-      window.open(rede.link);
+  RedirectUrl(media?: socialMedia): void {
+    if (media?.link)
+      window.open(media.link);
     else
-      window.location.href = rede!.email!;
+      window.location.href = media!.email!;
   }
 
 }

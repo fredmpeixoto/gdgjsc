@@ -12,10 +12,10 @@
   <div class="col-5">
     <img
       class="iconSocial"
-      [class.iconSocialMove]="rede.move"
-      (click)="RedirectUrl(rede)"
-      *ngFor="let rede of redesSociais"
-      [src]="'assets/' + rede.srcImagem"
+      [class.iconSocialMove]="media.move"
+      (click)="RedirectUrl(media)"
+      *ngFor="let media of socialMedia"
+      [src]="'assets/' + media.srcImg"
       alt="rede.label"
     />
   </div>
